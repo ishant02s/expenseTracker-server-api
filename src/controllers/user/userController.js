@@ -56,5 +56,5 @@ const loginUserCtrl = expressAsyncHandler(async(req, res) => {
         throw new Error ('Invalid Login Credentials');
     }
 });
-console.log("Controller");
+
 module.exports = {registerUser, fetchUsersCntrl, loginUserCtrl};
