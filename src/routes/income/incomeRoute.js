@@ -1,8 +1,6 @@
 //routing using EXPRESS to avoid creating a mess in app.js file
 const express = require('express');
 const { createIncCtrl, fetchAllIncCtrl, fetchIncDetailCtrl, updateIncCtrl, deleteIncCtrl} = require('../../controllers/income/incomeCtrl');
-const { fetchUsersCntrl } = require('../../controllers/user/userController');
-
 
 const incomeRoute = express.Router();
 //controller functions are needed to be called here

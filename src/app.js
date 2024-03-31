@@ -6,6 +6,8 @@ const dotenv = require("dotenv");
 
 const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 const incomeRoute = require('./routes/income/incomeRoute');
+const expenseRoute = require('./routes/expense/expenseRoute');
+
 // environment initializer
 dotenv.config();
 
@@ -28,7 +30,10 @@ app.use(express.json());
 app.use("/api/users", userRoute);
 
 //income routes
-app.use("/api/income", incomeRoute)
+app.use("/api/income", incomeRoute);
+
+//expense routes
+app.use("/api/expense", expenseRoute);
 
 //errors being handled here
 //the order in which the errors are being handled aloso matter
