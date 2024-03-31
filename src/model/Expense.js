@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const mongoosePaginate = require('mongoose-paginate-v2');
 //schema, that is the blueprint of the income model
 const expenseSchema = mongoose.Schema({
     title:{
@@ -27,6 +27,8 @@ const expenseSchema = mongoose.Schema({
 }, {
     timestamp: true,
 });
+
+expenseSchema.plugin(mongoosePaginate);
 
 const Expense = mongoose.model("Expense", expenseSchema)
 module.exports = Expense;
