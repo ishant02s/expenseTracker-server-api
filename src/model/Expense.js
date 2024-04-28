@@ -26,6 +26,12 @@ const expenseSchema = mongoose.Schema({
 
 }, {
     timestamp: true,
+    toJSON:{
+        virtual: true
+    },
+    toObject:{
+        virtual:true
+    },
 });
 
 expenseSchema.plugin(mongoosePaginate);
